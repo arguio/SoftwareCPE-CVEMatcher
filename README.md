@@ -5,9 +5,9 @@ Following is a list of the software you will find in this project, sorted and or
 Software load, filter, CPEs assignment and SQL transfer:
 
     1.- UniqueCPEVendorList.py
-    2.- NuevoFiltradoSoftware.py
-    3.- PruebaMultiprocessing.py
-    4.- ListaExtender.py
+    2.- SolftwareFilter.py
+    3.- CPEAssigner.py
+    4.- ListExtender.py
 
 Load CVEs dictionaries to SQL:
 
@@ -15,4 +15,4 @@ Load CVEs dictionaries to SQL:
 
 Data handling in SQL:
 
-    1.- UltimoCodigo.sql
+    1.- Code.sql
