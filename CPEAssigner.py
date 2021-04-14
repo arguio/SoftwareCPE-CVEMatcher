@@ -6,14 +6,14 @@ import numpy as np
 
 #Se declaran algunas variables que serán globales
 vendor = ""
-filepath = 'C:/Users/Alejandro Perales/Documents/CVE-NIST/officialCPEdictionary_v2.3.txt'
+filepath = 'C:/.../CVE-NIST/officialCPEdictionary_v2.3.txt'
 cpe = pd.read_csv(filepath, dtype = str, names=["title", "lang", "cpe23uri", "Part", "Vendor", "Product", "Version", "Update_sw", "Edition", "Language", "SW_Edition", "Target_SW", "Target_HW", "Other", "Autonumber"], sep='|', encoding='latin-1')
 
 #fn es el fichero donde se guardará la lista de software
-fn = 'C:/Users/Alejandro Perales/Documents/SoftwareCPEComp.txt'
+fn = 'C:/.../SoftwareCPEComp.txt'
 
 #Como pasaba en NuevoFiltradoSoftware.py, se carga la lista de CPEs únicos
-with open('C:/Users/Alejandro Perales/.spyder-py3/UniqueCPEVendor.txt', encoding="utf-8") as f:
+with open('C:/.../UniqueCPEVendor.txt', encoding="utf-8") as f:
     cpeuniquelist = f.readlines()
 cpeuniquelist = [x.strip() for x in cpeuniquelist]
 
@@ -76,7 +76,7 @@ def listener(q):
 def main():
     
     #Se carga el fichero de software filtrado y se guarda en un dataframe, sustituyendo, como hemos hecho anteriormente, NaN por espacios vacíos
-    filepathread = 'C:/Users/Alejandro Perales/Documents/SoftwareFiltradoGeneral.csv'
+    filepathread = 'C:/.../SoftwareFiltradoGeneral.csv'
     df_read = pd.read_csv(filepathread, dtype = str, names=['publisher','publisher_filtrado','publisher_original','name','name_original','version'], sep='|', encoding='latin-1')
     df_read = df_read.replace(np.nan, '', regex=True)
     
