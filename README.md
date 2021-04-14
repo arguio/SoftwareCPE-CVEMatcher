@@ -5,7 +5,7 @@ Following is a list of the software you will find in this project, sorted and or
 Software load, filter, CPEs assignment and SQL transfer:
 
     1.- UniqueCPEVendorList.py
-    2.- SolftwareFilter.py
+    2.- SoftwareFilter.py
     3.- CPEAssigner.py
     4.- ListExtender.py
 
