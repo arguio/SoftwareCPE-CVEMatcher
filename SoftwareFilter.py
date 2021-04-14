@@ -2,7 +2,7 @@ import re, fileinput, pandas as pd, numpy as np, time
 from difflib import SequenceMatcher
 
 #Cargo el fichero de texto
-filepath = 'C:/Users/Alejandro Perales/Documents/MAES_Software2.csv'
+filepath = 'C:/.../MAES_Software2.csv'
 
 #Elimino comillas
 with fileinput.FileInput(filepath, inplace=True, backup='.bak') as file:
@@ -572,7 +572,7 @@ for i in range(df_sorted.shape[0]):
             df_sorted.version[i] = df_sorted.version[i] + ' ' + s[0]
             
 #Exporto a archivo de texto y convierto cpeuniquelist en una lista
-with open('C:/Users/Alejandro Perales/.spyder-py3/UniqueCPEVendor.txt') as f:
+with open('C:/.../UniqueCPEVendor.txt') as f:
     cpeuniquelist = f.readlines()
 cpeuniquelist = [x.strip() for x in cpeuniquelist]
 
@@ -609,7 +609,7 @@ for i in range(df_sorted.shape[0]):
 print(time.time() - start) #14 min
 
 #Se exporta a fichero de texto, ordenando las columnas para mayor comodidad al manejarlas
-filepathexport = 'C:/Users/Alejandro Perales/Documents/SoftwareFiltradoGeneral.csv'
+filepathexport = 'C:/.../SoftwareFiltradoGeneral.csv'
 df_sorted = df_sorted[['publisher','publisher_filtrado','publisher_original','name','name_original','version']]
 df_sorted.to_csv(path_or_buf=filepathexport, sep='|', index=False, header=False, encoding='latin-1')
 
@@ -629,7 +629,7 @@ df_sorted.to_csv(path_or_buf=filepathexport, sep='|', index=False, header=False,
 #Esta parte de SQL funciona pero no se utiliza
 # import pyodbc
 
-# filepathexport = 'C:/Users/Alejandro Perales/Documents/SoftwareFiltradoGeneral.csv'
+# filepathexport = 'C:/.../SoftwareFiltradoGeneral.csv'
 # df_read = pd.read_csv(filepathexport, dtype = str, names=["publisher", "publisher_original", "name", "name_original", "version"], sep='|', encoding='latin-1')
 # df_read = df_read.replace(np.nan, '', regex=True)
 
@@ -648,7 +648,7 @@ df_sorted.to_csv(path_or_buf=filepathexport, sep='|', index=False, header=False,
 
 # cursor.execute('''
 # BULK INSERT Filtered_Software
-#     FROM 'C:/Users/Alejandro Perales/Documents/SoftwareFiltradoGeneral.csv'
+#     FROM 'C:/.../SoftwareFiltradoGeneral.csv'
 #     WITH 
 #         (FIELDTERMINATOR = '|',
 #          ROWTERMINATOR = '\n')''')
