@@ -1,8 +1,8 @@
 import time, re
 
 #Se declaran los directorios del fichero a leer (Comp(rimido)) y escribir (Ext(endido))
-fn = 'C:/Users/Alejandro Perales/Documents/SoftwareCPEComp.txt'
-filename = 'C:/Users/Alejandro Perales/Documents/SoftwareCPEExt.txt'
+fn = 'C:/.../SoftwareCPEComp.txt'
+filename = 'C:/.../SoftwareCPEExt.txt'
 
 #Se lee el fichero fn
 lines = open(fn, encoding="utf-8").read().split("\n")
@@ -73,7 +73,7 @@ conn.commit()
 #Se realiza un bulk insert para subir el fichero de texto
 cursor.execute('''
 BULK INSERT SoftwareCPE
-    FROM 'C:/Users/Alejandro Perales/Documents/SoftwareCPEExt.txt'
+    FROM 'C:/.../SoftwareCPEExt.txt'
     WITH 
         (FIELDTERMINATOR = '|',
          ROWTERMINATOR = '\n')''')
